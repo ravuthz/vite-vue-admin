@@ -1,8 +1,33 @@
 {
   "name": "vite-vue-admin",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
   "type": "module",
+  "description": "Vite Vue Admin comoponents",
+  "main": "./dist/vite-vue-admin.umd.js",
+  "module": "./dist/vite-vue-admin.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-vue-admin.es.js",
+      "require": "./dist/vite-vue-admin.es.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "library"
+  ],
+  "author": {
+    "name": "Ravuthz",
+    "email": "ravuthz@gmail.com",
+    "url": "https://github.com/ravuthz"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -14,7 +39,7 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
-  "dependencies": {
+  "peerDependencies": {
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
@@ -39,6 +64,7 @@
     "prettier": "^3.3.3",
     "typescript": "~5.6.3",
     "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.4.0",
     "vite-plugin-vue-devtools": "^7.6.8",
     "vitest": "^2.1.8",
     "vue-tsc": "^2.1.10"
